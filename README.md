@@ -1,4 +1,8 @@
-# Bunian
+# Bunian Social Links hub
+
+[![Astro](https://img.shields.io/badge/Astro-astro-151515?logo=astro&logoColor=white)](#)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-tailwind-06B6D4?logo=tailwindcss&logoColor=white)](#)
+[![TypeScript](https://img.shields.io/badge/TypeScript-TypeScript-3178C6?logo=typescript&logoColor=white)](#)
 
 This repository contains the Bunian website — a small Astro-powered site that serves as social-links hub for the Bunian Foundation. The site aggregates the foundation's social media profiles, contact links, and short project/branch information for easy public access.
 
@@ -36,12 +40,12 @@ Organizations often need a concise, trusted place to list official profiles and 
 ```bash
 bun install
 ```
+
 - Run dev server:
 
 ```bash
 bun run dev
 ```
-
 
 Common scripts (see `package.json`):
 

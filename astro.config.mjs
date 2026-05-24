@@ -4,11 +4,13 @@ import sitemap from "@astrojs/sitemap";
 import partytown from "@astrojs/partytown";
 import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
+import icon from "astro-icon";
+
 
 // https://astro.build/config
 export default defineConfig({
   experimental: {
     contentIntellisense: true,
   },
-  integrations: [mdx(), sitemap(), tailwind(), partytown(), compress()],
+  integrations: [mdx(), sitemap(), tailwind(), partytown(), compress(), icon()],
 });

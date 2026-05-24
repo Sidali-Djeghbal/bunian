@@ -8,10 +8,10 @@ const COPIES = 3;
 
 const branches = [
   {
-    name: "ATM",
-    title: "Algerian Tech Makers",
-    slogan: "نحو جيل يصنع التقنية لا يستهلكها فقط",
-    description: "مساحة تجمع المبدعين والمطورين لصناعة مشاريع تقنية حقيقية ونشر ثقافة الابتكار.",
+    name: "Algerian Tech Makers",
+    title: "الصفحة التقنية",
+    slogan: "شباب واعد يصنع أثرًا تقنيًا",
+    description: "صفحة تقنية تضُم شباب واعد، يريد الإسهام في بناء مجتمع تعلّمي يواكب التغيرات في المجال التّقني والتكنولوجي.",
     links: [
       {
         name: "فيسبوك",
@@ -46,36 +46,14 @@ const branches = [
     ],
     accent: "#F25C25",
     accentClass: "accent-cyan",
-    shape: `<img src="/assets/atm.webp" alt="ATM" width="720" height="334" loading="lazy" decoding="async" fetchpriority="low" class="branch-shape branch-shape-atm" />`
+    imageSrc: "/assets/atm.webp",
+    imageAlt: "Algerian Tech Makers",
   },
   {
-    name: "تذوق كتابا",
-    title: "نادي القراءة",
-    slogan: "كل كتاب بداية وعي جديد",
-    description: "مجتمع قرائي يهدف إلى بناء فكر واعٍ عبر جلسات القراءة والنقاشات الثقافية.",
-    links: [
-      {
-        name: "فيسبوك",
-        icon: "fb",
-        url: "https://www.facebook.com/tadaweqkitab",
-        color: "hover:bg-blue-500/10",
-      },
-      {
-        name: "إنستغرام",
-        icon: "ig",
-        url: "https://www.instagram.com/tadaweqkitab?igsh=N21qMm8xZ2NlZHc2",
-        color: "hover:bg-pink-500/10",
-      },
-    ],
-    accent: "#4D438D",
-    accentClass: "accent-amber",
-    shape: `<img src="/assets/tadawk_kitab.webp" alt="نادي القراءة" width="420" height="420" loading="lazy" decoding="async" fetchpriority="low" class="branch-shape" />`
-  },
-  {
-    name: "نفس طبي",
-    title: "التوعية الصحية",
-    slogan: "وعي صحي يصنع مجتمعًا أقوى",
-    description: "مبادرات توعوية وأنشطة ميدانية لنشر الثقافة الصحية وتعزيز أسلوب الحياة السليم.",
+    name: "نفَس طبّي",
+    title: "Medical Breath",
+    slogan: "صفحة طبية صاعدة",
+    description: "نهتم بالتوعية الصحية الجسدية والنفسية، بأسلوب مبسط وموثوق. كما نعمل على تصحيح مفاهيم طبية شائعة.",
     links: [
       {
         name: "فيسبوك",
@@ -84,21 +62,22 @@ const branches = [
         color: "hover:bg-blue-500/10",
       },
       {
-        name: "إنستغرام",
-        icon: "ig",
+        name: "تليجرام",
+        icon: "tg",
         url: "https://www.instagram.com/medical.breath?igsh=aTB0N2Zna2ppMHRr",
         color: "hover:bg-pink-500/10",
       },
     ],
     accent: "#273F69",
-    accentClass: "accent-rose",
-    shape: `<img src="/assets/medical_breath.webp" alt="التوعية الصحية" width="420" height="420" loading="lazy" decoding="async" fetchpriority="low" class="branch-shape" />`
+    accentClass: "accent-cyan",
+    imageSrc: "/assets/medical_breath.webp",
+    imageAlt: "نفَس طبّي",
   },
   {
-    name: "بعبق القران نحيا",
+    name: "بعبق القرآن نحيا",
     title: "المبادرة القرآنية",
     slogan: "نور القرآن في تفاصيل حياتنا",
-    description: "أنشطة قرآنية وتربوية تهدف لربط الشباب بالقرآن علمًا وعملاً وسلوكًا.",
+    description: "توعية شباب الأمّة الإسلاميّة بمسؤولياتهم الدّينيّة والأخلاقيّة، وتقوية صلتهم بدينهم، لنكون بذلك بديلا هادفا ونافعا على منصات التّواصل الاجتماعي.",
     links: [
       {
         name: "فيسبوك",
@@ -120,14 +99,15 @@ const branches = [
       },
     ],
     accent: "#12416B",
-    accentClass: "accent-emerald",
-    shape: `<img src="/assets/bi_ibk_quran.webp" alt="المبادرة القرآنية" width="420" height="420" loading="lazy" decoding="async" fetchpriority="low" class="branch-shape" />`
+    accentClass: "accent-amber",
+    imageSrc: "/assets/bi_ibk_quran.webp",
+    imageAlt: "بعبق القرآن نحيا",
   },
   {
     name: "مغلوبة فانتصر",
     title: "العطاء المجتمعي",
-    slogan: "نزرع الخير حيثما كنا",
-    description: "مبادرات إنسانية ومجتمعية تسعى لصناعة أثر حقيقي ومستدام داخل المجتمع.",
+    slogan: "قضيتنا قضيةُ كل المسلمين",
+    description: "صفحة تهتم بنصرة القضية الشريفة وجميع القضايا العادلة في العالم ومساندتها.",
     links: [
       {
         name: "فيسبوك",
@@ -149,9 +129,34 @@ const branches = [
       },
     ],
     accent: "#EBBA39",
-    accentClass: "accent-violet",
-    shape: `<img src="/assets/maghlouba.webp" alt="العطاء المجتمعي" width="420" height="420" loading="lazy" decoding="async" fetchpriority="low" class="branch-shape" />`
-  }
+    accentClass: "accent-rose",
+    imageSrc: "/assets/maghlouba.webp",
+    imageAlt: "مغلوبة فانتصر",
+  },
+  {
+    name: "تذوق كتابا",
+    title: "نادي القراءة",
+    slogan: "لأن القراءة تصنع وعياً",
+    description: "لمحبي الكتب والمطالعة نقدم لكم صفحة تحوي مراجعات واقتباسات وتحديات ومسابقات من أجل تنمية عادة المطالعة في مجتمعنا.",
+    links: [
+      {
+        name: "فيسبوك",
+        icon: "fb",
+        url: "https://www.facebook.com/tadaweqkitab",
+        color: "hover:bg-blue-500/10",
+      },
+      {
+        name: "إنستغرام",
+        icon: "ig",
+        url: "https://www.instagram.com/tadaweqkitab?igsh=N21qMm8xZ2NlZHc2",
+        color: "hover:bg-pink-500/10",
+      },
+    ],
+    accent: "#4D438D",
+    accentClass: "accent-emerald",
+    imageSrc: "/assets/tadawk_kitab.webp",
+    imageAlt: "تذوق كتابا",
+  },
 ];
 
 const socialIcon = {
@@ -313,7 +318,7 @@ const socialIcon = {
         <div class="section-header">
           <span class="section-eyebrow">فروعنا</span>
           <h2 class="section-title">خمسة فروع، هدف واحد</h2>
-          <p class="section-desc">كل فرع يحمل راية مختلفة، لكننا جميعًا نسعى لبناء مجتمع أكثر وعيًا.</p>
+          <p class="section-desc">كل صفحة تحمل رسالة مختلفة، لكننا جميعًا نسعى لبناء مجتمع أكثر وعيًا وأثرًا.</p>
         </div>
 
         <div class="branches-grid">
@@ -321,10 +326,18 @@ const socialIcon = {
             <article class={`branch-card ${branch.accentClass}`} style={`--branch-accent: ${branch.accent}; --accent: ${branch.accent}`}>
               <div class="branch-glow"></div>
 
-              <div
-                class={`branch-visual ${branch.name === "ATM" ? "branch-visual-atm" : ""}`}
-                set:html={branch.shape}
-              />
+              <div class={`branch-visual ${branch.name === "ATM" ? "branch-visual-atm" : ""}`}>
+                <img
+                  src={branch.imageSrc}
+                  alt={branch.imageAlt}
+                  width={branch.name === "ATM" ? 720 : 420}
+                  height={branch.name === "ATM" ? 334 : 420}
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
+                  class={`branch-shape ${branch.name === "ATM" ? "branch-shape-atm" : ""}`}
+                />
+              </div>
 
               <div class="branch-meta">
                 <div class="branch-name-group">
@@ -342,20 +355,22 @@ const socialIcon = {
                 <p class="branch-description">{branch.description}</p>
               </div>
 
-              <div class="branch-footer">
-                <div class="social-links">
-                  {branch.links.map((link) => (
-                    <a
-                      href={link.url}
-                      class={`social-link ${link.color}`}
-                      aria-label={link.name}
-                      target="_blank"
-                      rel="noreferrer"
-                      set:html={socialIcon[link.icon as keyof typeof socialIcon]}
-                    />
-                  ))}
+              {branch.links.length > 0 && (
+                <div class="branch-footer">
+                  <div class="social-links">
+                    {branch.links.map((link) => (
+                      <a
+                        href={link.url}
+                        class={`social-link ${link.color}`}
+                        aria-label={link.name}
+                        target="_blank"
+                        rel="noreferrer"
+                        set:html={socialIcon[link.icon as keyof typeof socialIcon]}
+                      />
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </article>
           ))}
         </div>
@@ -378,14 +393,14 @@ const socialIcon = {
       </section>
     </section>
 
-    <div class="my-48 relative w-screen overflow-x-clip">
+    <div class="my-28 md:my-48 relative w-screen overflow-x-clip">
       <div class="space-y-5 masked">
 
         <div class="marquee-wrapper" dir="ltr">
           <div class="marquee-track marquee-left">
             {Array.from({ length: COPIES }).map((_, i) => (
               <div
-                class="marquee-set text-7xl tracking-tighter font-bold"
+                class="marquee-set text-4xl sm:text-5xl lg:text-7xl tracking-tighter font-bold"
                 aria-hidden={i > 0 ? "true" : "false"}
               >
                 {leftTitles.map((title) => (
@@ -405,7 +420,7 @@ const socialIcon = {
           <div class="marquee-track marquee-right">
             {Array.from({ length: COPIES }).map((_, i) => (
               <div
-                class="marquee-set text-6xl tracking-tighter font-bold"
+                class="marquee-set text-3xl sm:text-4xl lg:text-6xl tracking-tighter font-bold"
                 aria-hidden={i > 0 ? "true" : "false"}
               >
                 {rightTitles.map((title) => (
@@ -424,11 +439,11 @@ const socialIcon = {
       </div>
 
       <Logo
-        class="size-80 absolute bottom-[-56px] left-1/2 -translate-x-1/2 blur-3xl slidein"
+        class="size-52 sm:size-64 md:size-80 absolute bottom-[-38px] sm:bottom-[-48px] md:bottom-[-56px] left-1/2 -translate-x-1/2 blur-3xl slidein"
       />
 
       <Logo
-        class="size-80 absolute bottom-[-56px] left-1/2 -translate-x-1/2 slidein"
+        class="size-52 sm:size-64 md:size-80 absolute bottom-[-38px] sm:bottom-[-48px] md:bottom-[-56px] left-1/2 -translate-x-1/2 slidein"
       />
     </div>
   </main>
@@ -736,11 +751,11 @@ const socialIcon = {
   }
 
   .branches-grid {
-    @apply grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6;
+    @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6;
   }
 
   .branch-card {
-    @apply relative overflow-hidden rounded-2xl border border-gray-200 bg-white/10 p-8 transition-all duration-700 hover:bg-gray-50;
+    @apply relative overflow-hidden rounded-2xl border border-gray-200 bg-white/10 p-6 sm:p-7 md:p-8 pb-28 sm:pb-32 md:pb-8 transition-all duration-700 hover:bg-gray-50;
   }
 
   .branch-card:hover {
@@ -762,16 +777,11 @@ const socialIcon = {
   }
 
   .branch-visual {
-    @apply absolute bottom-6 left-6 w-24 h-24 text-gray-200 pointer-events-none transition-all duration-500;
+    @apply absolute bottom-4 left-4 w-20 h-20 sm:bottom-6 sm:left-6 sm:w-24 sm:h-24 text-gray-200 pointer-events-none transition-all duration-500;
   }
 
   .branch-visual-atm {
-    @apply w-44 h-24 bottom-1;
-  }
-
-  .branch-card:hover .branch-visual {
-    @apply scale-110;
-    color: color-mix(in srgb, var(--branch-accent) 20%, transparent);
+    @apply w-36 h-20 sm:w-44 sm:h-24 md:w-52 md:h-24 -left-1 -bottom-1;
   }
 
   .branch-shape {
@@ -779,11 +789,11 @@ const socialIcon = {
   }
 
   .branch-shape-atm {
-    @apply w-full h-full max-w-none scale-125 origin-bottom-left;
+    @apply w-full h-full max-w-none object-cover object-left scale-110 origin-left;
   }
 
   .branch-meta {
-    @apply flex items-start gap-4 mb-8 relative z-10;
+    @apply flex items-start gap-4 mb-6 sm:mb-8 relative z-10;
   }
 
 
@@ -800,7 +810,7 @@ const socialIcon = {
   }
 
   .branch-body {
-    @apply mb-8 relative z-10;
+    @apply mb-6 sm:mb-8 relative z-10;
   }
 
   .branch-slogan {
@@ -818,12 +828,16 @@ const socialIcon = {
     @apply text-sm text-zinc-600 leading-[1.8];
   }
 
-  .branch-footer {
-    @apply flex items-center justify-between pt-6 border-t border-gray-200 relative z-10;
-  }
-
+ 
   .social-links {
     @apply flex items-center gap-3;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .branch-card:hover .branch-visual {
+      @apply scale-110;
+      color: color-mix(in srgb, var(--branch-accent) 20%, transparent);
+    }
   }
 
   .social-link {

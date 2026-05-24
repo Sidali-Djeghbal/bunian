@@ -1,0 +1,6 @@
+# Prevent Jekyll from processing Astro source files
+exclude:
+  - "src"
+  - ".github"
+  - "node_modules"
+  - "public"

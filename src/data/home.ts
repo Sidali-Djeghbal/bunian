@@ -58,6 +58,12 @@ export const branches: Branch[] = [
                 url: "https://discord.com/invite/WF3832TDzA",
                 color: "hover:bg-purple-500/10",
             },
+            {
+                name: "المدونة",
+                icon: "web",
+                url: "https://www.algeriantechmakers.online/blog",
+                color: "hover:bg-gray-500/10",
+            },
         ],
         accent: "#F25C25",
         accentClass: "accent-cyan",

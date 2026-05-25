@@ -270,7 +270,7 @@ hr {
   color: rgb(var(--white));
 }
 
-/* IntersectionObserver fallback for scroll-driven animations */
+/* IntersectionObserver for scroll-driven animations */
 .io-fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -278,7 +278,7 @@ hr {
   transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
 }
 .io-fade-in.io-visible {
-  opacity: 0.75;
+  opacity: 1;
   transform: translateY(0);
   filter: blur(0);
 }
@@ -305,15 +305,14 @@ hr {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .intro {
-    animation: none !important;
-    opacity: 0.75 !important;
-    transform: none !important;
-    filter: none !important;
-  }
-  .slidein {
+  .slidein,
+  .io-fade-in,
+  .io-slide-in,
+  .io-slide-in-logo {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+    filter: none !important;
+    transition: none !important;
   }
 }

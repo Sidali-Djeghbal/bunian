@@ -131,22 +131,20 @@ const jsonLd = {
 <!-- Structured Data -->
 <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
-<!-- Scroll-driven animation fallback -->
+<!-- Scroll-driven animations via IntersectionObserver -->
 <script>
-  if (!CSS.supports("animation-timeline", "view()")) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("io-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
-    );
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll(".io-fade-in, .io-slide-in").forEach((el) => observer.observe(el));
-    });
-  }
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("io-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+  );
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".io-fade-in, .io-slide-in, .io-slide-in-logo").forEach((el) => observer.observe(el));
+  });
 </script>

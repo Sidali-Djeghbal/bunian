@@ -29,7 +29,7 @@ const jsonLd = {
       name: "بنيان",
       url: Astro.site?.href,
       description,
-      logo: `${Astro.site}/favicon.svg`,
+      logo: Astro.site ? new URL("/favicon.svg", Astro.site).href : "/favicon.svg",
       foundingDate: "2024",
       sameAs: [
         "https://www.facebook.com/bunianfoundation",
@@ -55,7 +55,7 @@ const jsonLd = {
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<meta name="theme-color" content="#0f172a" />
+<meta name="theme-color" content="#a8e524" />
 <meta name="author" content="Bunian Foundation" />
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
 <meta name="generator" content={Astro.generator} />
@@ -81,18 +81,18 @@ const jsonLd = {
 <link
   rel="preload"
   as="style"
-  href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap"
+  href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=optional"
 />
 <link
   rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap"
+  href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=optional"
   media="print"
   onload="this.media='all';this.onload=null"
 />
 <noscript>
   <link
     rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=optional"
   />
 </noscript>
 

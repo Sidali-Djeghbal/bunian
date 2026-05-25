@@ -49,7 +49,7 @@ export const branches: Branch[] = [
             {
                 name: "لينكد إن",
                 icon: "ln",
-                url: "https://www.linkedin.com/posts/algerian-tech-makers_atmabrteam-activity-7293728696434122752-gDrm?utm_source=share&utm_medium=member_android&rcm=ACoAACzRbTsB5vBhYwHis8azgdlYWrYcl9pPKys",
+                url: "https://www.linkedin.com/company/algerian-tech-makers/",
                 color: "hover:bg-blue-600/10",
             },
             {

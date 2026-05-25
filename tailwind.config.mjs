@@ -6,6 +6,9 @@ export default {
 			colors: {
 				ngreen: '#a8e524',				
 			},
+			fontFamily: {
+				aligarh: ['aligarh-arabic', 'Instrument Sans', 'sans-serif'],
+			},
 		},
 	},
 	plugins: [],

@@ -22,6 +22,7 @@ const { branch } = Astro.props as Props;
       decoding="async"
       fetchpriority="low"
       class={`branch-shape ${branch.isAtm ? "branch-shape-atm" : ""}`}
+      style={`aspect-ratio: ${branch.isAtm ? "720/334" : "1/1"}`}
     />
   </div>
 

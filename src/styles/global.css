@@ -1,19 +1,5 @@
-/* Lenis smooth scroll */
-html.lenis,
-html.lenis body {
-  height: auto;
-}
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-.lenis.lenis-smooth iframe {
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -39,10 +25,10 @@ html.lenis body {
   --accent-dark: #89c212;
   --white: 255, 255, 255;
   --white-smoke: 250, 250, 250;
-  --gray-dark: 14, 16, 15; /* primary text color */
+  --gray-dark: 14, 16, 15;
   --greenish-black: 25, 31, 25;
-  --gray-light: 245, 245, 246; /* light surface */
-  --gray: 200, 200, 200; /* borders / muted */
+  --gray-light: 245, 245, 246;
+  --gray: 200, 200, 200;
   --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
@@ -284,13 +270,50 @@ hr {
   color: rgb(var(--white));
 }
 
-.scroll-watcher {
-  scale: 0 1;
-  animation: scroll-watcher linear;
-  animation-timeline: scroll();
+/* IntersectionObserver fallback for scroll-driven animations */
+.io-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(3px);
+  transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
 }
-@keyframes scroll-watcher {
-  to {
-    scale: 1 1;
+.io-fade-in.io-visible {
+  opacity: 0.75;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.io-slide-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.io-slide-in.io-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .intro {
+    animation: none !important;
+    opacity: 0.75 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  .slidein {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

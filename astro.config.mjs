@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import compress from "astro-compress";
 import icon from "astro-icon";
 import sitemap from "@astrojs/sitemap";
 
@@ -10,5 +9,8 @@ export default defineConfig({
   experimental: {
     contentIntellisense: true,
   },
-  integrations: [tailwind(), sitemap(), compress(), icon()],
+  integrations: [tailwind(), sitemap(), icon()],
+  build: {
+    inlineStylesheets: "auto",
+  },
 });

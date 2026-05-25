@@ -1,9 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import ClosingSection from "./ClosingSection.astro";
 ---
 
 <section class="about-shell">
+  <h1 class="sr-only">بنيان</h1>
+
   <div class="h-60 w-72 rounded-full absolute -top-40 -z-10 bg-ngreen opacity-20 blur-3xl"></div>
   <div class="hidden md:block h-60 w-60 rounded-full absolute -bottom-40 -z-10 -right-40 bg-ngreen opacity-15 blur-3xl"></div>
   <div class="hidden md:block h-60 w-60 rounded-full absolute -bottom-40 -z-10 -left-40 bg-ngreen opacity-15 blur-3xl"></div>
@@ -21,7 +22,7 @@ import ClosingSection from "./ClosingSection.astro";
     />
   </div>
 
-  <p class="md:mt-60 mt-32 text-start opacity-75 px-4 intro">
+  <p class="md:mt-60 mt-32 text-start opacity-75 px-4 intro io-fade-in">
     بنيان هو صرح تطوعي يجمع نخبة من الشباب المسلم
     الساعي لإحداث التغيير والنهوض بالأمة، متبعين مبادئ ديننا الحنيف وناشرين
     الخير عبر مبادرات وفعاليات في مختلف المجالات.
@@ -50,7 +51,7 @@ import ClosingSection from "./ClosingSection.astro";
           <span class="label-line"></span>
         </div>
 
-        <h1 class="hero-title">
+        <div class="hero-title">
           <span class="title-main flex items-center justify-center">
             <Image
               src="/assets/bunian.webp"
@@ -63,7 +64,7 @@ import ClosingSection from "./ClosingSection.astro";
             />
           </span>
           <span class="title-sub">نبني الوعي، نصنع الأثر</span>
-        </h1>
+        </div>
 
         <p class="hero-desc">
           مساحة شبابية مستقلة تجمع الطاقات الفتية لبناء مجتمع أكثر وعيًا،
@@ -105,26 +106,26 @@ import ClosingSection from "./ClosingSection.astro";
 
     <section class="philosophy-section">
       <div class="philosophy-grid">
-        <div class="philosophy-card">
+        <article class="philosophy-card">
           <div class="philosophy-accent" style="background: #84cc16;"></div>
           <span class="philosophy-index">01</span>
-          <h3>رسالتنا</h3>
+          <h2>رسالتنا</h2>
           <p>صناعة بيئة شبابية واعية تدفع نحو التعلم المستمر، العطاء بلا حدود، وبناء مشاريع نافعة تخدم المجتمع.</p>
-        </div>
+        </article>
 
-        <div class="philosophy-card">
+        <article class="philosophy-card">
           <div class="philosophy-accent" style="background: #a8e524;"></div>
           <span class="philosophy-index">02</span>
-          <h3>رؤيتنا</h3>
+          <h2>رؤيتنا</h2>
           <p>أن نكون نموذجًا شبابيًا ملهمًا يجمع بين القيم الراسخة، الإبداع الحقيقي، وصناعة تأثير يمتد لأجيال.</p>
-        </div>
+        </article>
 
-        <div class="philosophy-card">
+        <article class="philosophy-card">
           <div class="philosophy-accent" style="background: #65a30d;"></div>
           <span class="philosophy-index">03</span>
-          <h3>منهجيتنا</h3>
+          <h2>منهجيتنا</h2>
           <p>نؤمن أن التغيير الحقيقي يبدأ بخطوة عملية، فنحرص على الربط بين الفكرة والتنفيذ، بين العلم والتطبيق.</p>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -234,8 +235,7 @@ import ClosingSection from "./ClosingSection.astro";
   }
 
   .stat-num {
-    @apply text-3xl md:text-4xl font-black tracking-tight;
-    color: rgb(36, 36, 36);
+    @apply text-3xl md:text-4xl font-black tracking-tight text-gray-900;
   }
 
   .stat-label {
@@ -278,7 +278,7 @@ import ClosingSection from "./ClosingSection.astro";
     @apply block text-xs font-mono text-zinc-600 mb-6 tracking-wider;
   }
 
-  .philosophy-card h3 {
+  .philosophy-card h2 {
     @apply text-xl font-bold text-gray-900 mb-4;
   }
 

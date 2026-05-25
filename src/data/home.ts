@@ -77,8 +77,8 @@ export const branches: Branch[] = [
                 color: "hover:bg-blue-500/10",
             },
             {
-                name: "تليجرام",
-                icon: "tg",
+                name: "إنستغرام",
+                icon: "ig",
                 url: "https://www.instagram.com/medical.breath?igsh=aTB0N2Zna2ppMHRr",
                 color: "hover:bg-pink-500/10",
             },

@@ -48,8 +48,8 @@ const COPIES = 3;
     </div>
   </div>
 
-  <Logo class="size-52 sm:size-64 md:size-80 absolute bottom-[-38px] sm:bottom-[-48px] md:bottom-[-56px] left-1/2 -translate-x-1/2 blur-3xl slidein" />
-  <Logo class="size-52 sm:size-64 md:size-80 absolute bottom-[-38px] sm:bottom-[-48px] md:bottom-[-56px] left-1/2 -translate-x-1/2 slidein" />
+  <Logo class="size-52 sm:size-64 md:size-80 absolute bottom-[-38px] sm:bottom-[-48px] md:bottom-[-56px] left-1/2 -translate-x-1/2 blur-3xl slidein io-slide-in-logo" />
+  <Logo class="size-52 sm:size-64 md:size-80 absolute bottom-[-38px] sm:bottom-[-48px] md:bottom-[-56px] left-1/2 -translate-x-1/2 slidein io-slide-in-logo" />
 </div>
 
 <style>
@@ -145,6 +145,16 @@ const COPIES = 3;
       transform: translateY(0px) translateX(-50%);
       opacity: 1;
     }
+  }
+
+  .io-slide-in-logo {
+    opacity: 0;
+    transform: translateY(50px) translateX(-50%);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .io-slide-in-logo.io-visible {
+    opacity: 1;
+    transform: translateY(0px) translateX(-50%);
   }
 
   @media (max-width: 768px) {

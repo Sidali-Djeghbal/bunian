@@ -1,6 +1,5 @@
 ---
 import "../styles/global.css";
-import { ClientRouter } from "astro:transitions";
 interface Props {
   title: string;
   description: string;
@@ -30,6 +29,8 @@ const jsonLd = {
       name: "بنيان",
       url: Astro.site?.href,
       description,
+      logo: `${Astro.site}/favicon.svg`,
+      foundingDate: "2024",
       sameAs: [
         "https://www.facebook.com/bunianfoundation",
         "https://www.instagram.com/bunianfoundation",
@@ -58,17 +59,31 @@ const jsonLd = {
 <meta name="author" content="Bunian Foundation" />
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
 <meta name="generator" content={Astro.generator} />
-<ClientRouter />
+<link rel="alternate" hreflang="ar" href={canonicalURL} />
+<link rel="alternate" hreflang="x-default" href={canonicalURL} />
 
 <!-- Preconnect for external resources -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<!-- Google Fonts -->
+<!-- Google Fonts (non-render-blocking) -->
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap"
+/>
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap"
+  media="print"
+  onload="this.media='all';this.onload=null"
 />
+<noscript>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap"
+  />
+</noscript>
 
 <!-- Custom Font Preloads -->
 <link
@@ -116,22 +131,22 @@ const jsonLd = {
 <!-- Structured Data -->
 <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
-<!-- Smooth scroll (self-hosted, no CDN) -->
+<!-- Scroll-driven animation fallback -->
 <script>
-  import Lenis from "lenis";
-
-  const lenis = new Lenis({
-    duration: 1.5,
-    easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smooth: true,
-    smoothTouch: false,
-    touchMultiplier: 2,
-  });
-
-  function raf(time: number) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
+  if (!CSS.supports("animation-timeline", "view()")) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("io-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    );
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".io-fade-in, .io-slide-in").forEach((el) => observer.observe(el));
+    });
   }
-
-  requestAnimationFrame(raf);
 </script>

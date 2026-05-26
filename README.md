@@ -88,10 +88,35 @@ Example:
 
 Icons are inline SVGs defined in `src/data/social-icons.ts`. Each key corresponds to an `icon` field in a branch link. To add a new icon, add a new entry with an SVG string.
 
-**Deployment**
+**Deployment (GitHub Pages)**
 
-- Hosts: Netlify, Cloudflare Pages are recommended for static deployments.
-- Build: `bun run build` — output is written to `dist/`.
+This project includes a pre-configured GitHub Actions workflow (`.github/workflows/pages.yml`) that automatically builds and deploys to GitHub Pages on every push to `main`.
+
+**Setup steps:**
+
+1. **Create the repository** on GitHub at `https://github.com/<username>/<repo>`.
+
+2. **Update `astro.config.mjs`** — set `site` and `base` to match your repository:
+
+   ```js
+   site: "https://<username>.github.io",
+   base: "/<repo>/",
+   ```
+
+3. **Push to GitHub:**
+
+   ```bash
+   git remote add origin https://github.com/<username>/<repo>.git
+   git push -u origin main
+   ```
+
+4. **Enable GitHub Pages:**
+   - Go to your repo **Settings → Pages**.
+   - Under **Build and deployment**, set **Source** to **GitHub Actions**.
+
+5. **Done.** Every push to `main` triggers a build and deploy. Your site will be live at `https://<username>.github.io/<repo>/`.
+
+The workflow uses `oven-sh/setup-bun` to install dependencies and `actions/upload-pages-artifact` / `actions/deploy-pages` for deployment. No manual build steps required.
 
 **Customization**
 

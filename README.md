@@ -32,7 +32,7 @@ A centralized landing page for the Bunian project family — a static site built
 **Getting Started (local)**
 
 ```bash
-git clone https://github.com/Sidali-Djeghbal/bunian
+git clone https://github.com/Sidali-Djeghbal/bunian-links
 cd bunian
 bun install
 bun run dev
